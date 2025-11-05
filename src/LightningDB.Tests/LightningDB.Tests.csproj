@@ -1,13 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+  <OutputType>Exe</OutputType>
+    <TargetFrameworks>net9.0</TargetFrameworks>
     <LangVersion>13</LangVersion>
     <AssemblyName>LightningDB.Tests</AssemblyName>
     <PackageId>LightningDB.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <IsTestProject>true</IsTestProject>
     <LightningDBTargetRuntimeRelativePath>.\</LightningDBTargetRuntimeRelativePath>
+
+    <!-- Native AOT settings -->
+    <PublishAot>true</PublishAot>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>

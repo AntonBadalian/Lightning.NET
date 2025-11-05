@@ -2,9 +2,14 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <TargetFramework>net9.0</TargetFramework>
         <LangVersion>13</LangVersion>
         <LightningDBTargetRuntimeRelativePath>.\</LightningDBTargetRuntimeRelativePath>
+
+        <!-- Native AOT settings -->
+        <PublishAot>true</PublishAot>
+        <SelfContained>true</SelfContained>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
     </PropertyGroup>
 
     <ItemGroup>
